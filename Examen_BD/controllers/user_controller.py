@@ -3,9 +3,11 @@ from view.login_view import LoginView
 from view.register_view import RegisterView
 from view.account_view import AccountView
 from view.create_account_view import CreateAccountView
+from view.transfer_view import TransferView
+from view.movements_view import MovementsView
+from view.deposit_view import DepositView
 from models.account_model import AccountModel
 from tkinter import messagebox
-
 
 class UserController:
     def __init__(self, user_model):
@@ -16,7 +18,7 @@ class UserController:
         self.login_view = None
         self.register_view = None
         self.account_view = None
-        self.current_user_id = None  # se setea al iniciar sesión
+        self.current_user_id = None
 
     def run(self):
         self.show_login_window()
@@ -39,6 +41,15 @@ class UserController:
 
     def show_create_account_window(self):
         CreateAccountView(self)
+
+    def show_transfer_window(self):
+        TransferView(self)
+
+    def show_movements_window(self, cuenta_number):
+        MovementsView(self, cuenta_number)
+
+    def show_deposit_window(self, cuenta_number):
+        DepositView(self, cuenta_number)
 
     def handle_register(self, username, password, firstname, lastname, window):
         if not all([username, password, firstname, lastname]):

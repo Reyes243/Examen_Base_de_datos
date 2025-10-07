@@ -34,4 +34,11 @@ class CreateAccountView(tk.Toplevel):
             messagebox.showerror("Error", "Todos los campos son obligatorios")
             return
 
-        self.user_controller.handle_create_account(email, firstname, lastname, self)
+        success = self.user_controller.account_model.create_account(
+            self.user_controller.current_user_id, email, firstname, lastname
+        )
+
+        if success:
+            messagebox.showinfo("Éxito", "Cuenta creada correctamente.")
+            self.destroy()
+            self.user_controller.refresh_account_view()
