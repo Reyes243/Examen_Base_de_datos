@@ -1,43 +1,43 @@
-FintechApp – Sistema Bancario Básico
+# FintechApp – Sistema Bancario Básico
 
 Este proyecto simula el backend de una plataforma tipo Fintech, utilizando MySQL como sistema de base de datos. Permite registrar usuarios, crear cuentas bancarias, realizar transferencias entre cuentas y consultar el historial de movimientos.
 
-¿Cómo instalar la base de datos?
+## ¿Cómo instalar la base de datos?
 
-Para instalar la base de datos, solo necesitas tener MySQL workbench instalado. Luego, tiene que abrir la carpeta BD_Examen_SQL y ejucutar el primer scrip que es login_app en seguda de eso ejecutar el segundo scrip datos_login_app y ya estaria instalado.
+Para instalar la base de datos, solo necesitas tener MySQL Workbench instalado. Luego, tiene que abrir la carpeta `BD_Examen_SQL` y ejecutar el primer script que es `login_app.sql`, en seguida de eso ejecutar el segundo script `datos_login_app.sql` y ya estaría instalado.
 
-Usuario de prueba
+## Usuario de prueba
 
 Puedes usar el siguiente usuario para probar la aplicación:
 
-Usuario: admin
+- **Usuario**: admin
+- **Contraseña**: admin
 
-Contraseña: admin
+## Ejemplos de operaciones
 
-Registrar un nuevo depósito en una cuenta:
+### Registrar un nuevo depósito en una cuenta:
 
-En la pantalla de "Cuenta", selecciona la opción "Depositar".
+1. En la pantalla de **"Cuenta"**, selecciona la opción **"Depositar"**.
+2. Ingresa el monto que deseas depositar (por ejemplo, **100.00**).
+3. Al confirmar, el sistema hará el depósito en la cuenta seleccionada.
 
-Ingresa el monto que deseas depositar (por ejemplo, 100.00).
+**Ejemplo**: Depósito de 100.00 en la cuenta **Z9Y8X7W6V5U4T3S2**.
 
-Al confirmar, el sistema hará el depósito en la cuenta seleccionada.
+### Hacer una transferencia entre cuentas:
 
-Ejemplo: Depósito de 100.00 en la cuenta Z9Y8X7W6V5U4T3S2.
+1. En la opción **"Transferir"**, ingresa el monto que deseas transferir (por ejemplo, **50.00**).
+2. Selecciona la cuenta de **origen** y la cuenta de **destino**.
+3. Confirma la operación.
 
-Hacer una transferencia entre cuentas:
+**Ejemplo**: Transferencia de **50.00** desde la cuenta **606AA4B84DCEA72B** hacia la cuenta **2B81EA27CAEBC1F7**.
 
-En la opción "Transferir", ingresa el monto que deseas transferir (por ejemplo, 50.00), selecciona la cuenta de origen y la cuenta de destino.
+### Consultar el historial de movimientos de una cuenta:
 
-Confirma la operación.
+1. Desde el menú principal, selecciona **"Consultar Movimientos"**.
+2. La aplicación mostrará todas las operaciones realizadas en las cuentas asociadas, incluyendo depósitos, transferencias, etc.
 
-Ejemplo: Transferencia de 50.00 desde la cuenta 606AA4B84DCEA72B hacia la cuenta 2B81EA27CAEBC1F7.
+## Integrantes del equipo
 
-Consultar el historial de movimientos de una cuenta:
+- **Hinojosa Torres Jose Reyes**
+- **Luquin Lopez Carlos Alonso**
 
-Desde el menú principal, selecciona "Consultar de Movimientos".
-
-La aplicación mostrará todas las operaciones realizadas en las cuentas asociadas, incluyendo depósitos, transferencias, etc.
-
-Integrantes del equipo
-Hinojosa Torres Jose Reyes 
-Luquin Lopez Carlos Alonso
